@@ -9,14 +9,14 @@
 
 <p align="center">
   <a href="https://rastau-kz.vercel.app"><b>Демо-стенд</b></a> ·
-  <a href="https://facei7505-droid.github.io/rastau.kz/"><b>Видео и презентация</b></a> ·
-  <a href="docs/presentation/rastau-presentation.pdf">Презентация PDF</a> ·
+  <a href="https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_"><b>Видео и презентация (Google Диск)</b></a> ·
+  <a href="ARCHITECTURE.md">Архитектура</a> ·
   <a href="docs/TECH.md">Техническое описание</a>
 </p>
 
 <p align="center">
-  <a href="https://facei7505-droid.github.io/rastau.kz/"><img src="docs/video/thumb.jpg" width="820" alt="Смотреть видео: презентация и демо Rastau"></a><br>
-  <sub>▶ Видео 5:27 с озвучкой: презентация и показ живой системы. <a href="docs/video/rastau-video.mp4">Скачать MP4</a> · <a href="docs/video/rastau-video-subtitles.mp4">с субтитрами</a></sub>
+  <a href="https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_"><img src="docs/video/thumb.jpg" width="820" alt="Смотреть видео: презентация и демо Rastau"></a><br>
+  <sub>▶ Видео 5:27 с озвучкой и презентация PDF лежат в <a href="https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_">папке на Google Диске</a>.</sub>
 </p>
 
 ---
@@ -67,24 +67,26 @@
 
 ## Стек
 
-PWA без сборки: Preact + htm + Leaflet, ES-модули из `src/`. Бэкенд Supabase (PostgreSQL, Auth, Storage, Realtime): баллы доверия считает триггер на сервере. Распознавание лиц на устройстве через MediaPipe. Хостинг Vercel.
+PWA без сборщика: Preact + htm + Leaflet, ES-модули. Бэкенд Supabase (PostgreSQL, Auth, Storage, Realtime): балл доверия к фото считает триггер на сервере, журнал защищён цепочкой хэшей. Лица закрываются на устройстве через MediaPipe. Хостинг Vercel.
+
+Как устроена система, с диаграммами: [ARCHITECTURE.md](ARCHITECTURE.md).
+
+## Запуск локально
 
 ```bash
+cd web
 npm install
-python3 -m http.server 5175   # открыть http://127.0.0.1:5175
+npm run dev        # http://127.0.0.1:5175, офлайн-режим с демо-данными
+npm run build      # сборка в web/dist для хостинга
 ```
-
-На `127.0.0.1` приложение работает офлайн с демо-данными в браузере. Подробности в [docs/TECH.md](docs/TECH.md).
 
 ## Структура
 
 ```
-index.html, sw.js, manifest.json   оболочка PWA
-src/ui/        экраны: аким, инспектор, подрядчик, житель, план пилота
-src/api/       онлайн (Supabase) и офлайн (IndexedDB) режимы
-src/lib/       проверки фото, очередь без связи, приватность, ЭЦП
-supabase/      схема БД, миграции, edge-функции
-docs/          видео, презентация, скриншоты, страница для GitHub Pages
+web/        приложение (PWA): экраны, режимы онлайн и офлайн, проверки фото
+supabase/   схема БД, миграции, edge-функции
+docs/       скриншоты, слайды, страница проекта, описание для YouTube
+ARCHITECTURE.md   как всё устроено
 ```
 
 ## Пилот

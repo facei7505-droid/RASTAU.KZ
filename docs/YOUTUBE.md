@@ -1,6 +1,6 @@
 # Загрузка на YouTube
 
-Файл: `docs/video/rastau-video.mp4` (субтитры отдельно: `docs/video/rastau-video.srt`, язык русский).
+Видео: `rastau-video.mp4` из [папки на Google Диске](https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_). Субтитры: `docs/video/rastau-video.srt` (русский).
 Доступ: «Открытый доступ». Категория: «Наука и техника».
 
 **Название**
@@ -26,7 +26,8 @@ Rastau проверяет работу подрядчиков по фото с �
 04:12 Закон, пилот и модель
 
 Демо-стенд: https://rastau-kz.vercel.app (пароль для всех ролей fakt2026)
-Код и презентация: https://github.com/facei7505-droid/RASTAU.KZ
+Код: https://github.com/facei7505-droid/RASTAU.KZ
+Видео и презентация: https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_
 
 **Теги**
 

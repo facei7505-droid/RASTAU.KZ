@@ -26,7 +26,7 @@ h1 em{font-style:normal;color:var(--gold)}
 .btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 main{padding:0 16px 64px}
 .video{margin-top:-32px;background:#000;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(11,42,74,.25)}
-video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.video{display:block}.video img{display:block;width:100%;height:auto}
 .cap{color:var(--muted);font-size:14px;margin:10px 0 0}
 h2{font-size:26px;margin:52px 0 16px}
 .tasks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
@@ -45,18 +45,13 @@ footer{border-top:1px solid var(--line);padding:24px 16px;color:var(--muted);fon
   <p class="lead">Работа подрядчика засчитывается только по фото с места, которое проверил сервер: GPS, время, повтор снимка и сравнение «до/после». Решение принимает человек, акт подписывается ЭЦП.</p>
   <div class="btns">
     <a class="btn primary" href="https://rastau-kz.vercel.app">Открыть демо-стенд</a>
-    <a class="btn" href="presentation/rastau-presentation.pdf">Презентация PDF</a>
+    <a class="btn" href="https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_">Видео и презентация</a>
     <a class="btn" href="https://github.com/facei7505-droid/RASTAU.KZ">Код на GitHub</a>
   </div>
 </div></header>
 <main><div class="wrap">
-  <div class="video">
-    <video controls preload="metadata" poster="screenshots/dashboard.jpg" playsinline>
-      <source src="video/rastau-video.mp4" type="video/mp4">
-      <track kind="subtitles" srclang="ru" label="Русский" src="video/rastau-video.ru.vtt">
-    </video>
-  </div>
-  <p class="cap">Видео 5:27: презентация и показ живой системы. Субтитры включаются в плеере. Пароль для всех демо-ролей: fakt2026.</p>
+  <a class="video" href="https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_"><img src="video/thumb.jpg" alt="Смотреть видео на Google Диске" width="1600" height="900"></a>
+  <p class="cap">Видео 5:27 с озвучкой и презентация PDF лежат в <a href="https://drive.google.com/drive/folders/1-oYjzJ5ZPO1qjyJ1anl8iatxgwzeNlG_">папке на Google Диске</a>. Пароль для всех демо-ролей: fakt2026.</p>
 
   <h2>Три задачи G-TON 2026</h2>
   <div class="tasks">

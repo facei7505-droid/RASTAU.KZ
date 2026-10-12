@@ -1,0 +1,26 @@
+{
+  "name": "rastau",
+  "version": "1.0.0",
+  "description": "Rastau: акимат платит только за работу, подтверждённую фото с места (G-TON 2026)",
+  "scripts": {
+    "dev": "python3 -m http.server 5175 --bind 127.0.0.1",
+    "build": "node scripts/build.mjs"
+  },
+  "keywords": [],
+  "author": "facei7505-droid",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "htm": "^3.1.1",
+    "leaflet": "^1.9.4",
+    "preact": "^10.29.8",
+    "qrcode-generator": "^1.4.4"
+  },
+  "devDependencies": {
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "esbuild": "^0.24.0",
+    "xlsx": "0.18.5"
+  },
+  "type": "module",
+  "private": true
+}
