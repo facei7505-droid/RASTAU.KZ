@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Rastau · оплата только за подтверждённую работу</title>
+<meta name="description" content="Rastau: акимат принимает работу подрядчика только после подтверждения фото, GPS и проверки на сервере.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<script>
+  window.FAKT_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname)
+  // Локально библиотеки берутся из node_modules, в продакшене те же файлы с jsDelivr (версии закреплены)
+  var nm = window.FAKT_LOCAL ? '/node_modules/' : 'https://cdn.jsdelivr.net/npm/'
+  var pv = window.FAKT_LOCAL ? 'preact/' : 'preact@10.29.8/'
+  var hv = window.FAKT_LOCAL ? 'htm/' : 'htm@3.1.1/'
+  var map = {
+    'preact': nm + pv + 'dist/preact.module.js',
+    'preact/hooks': nm + pv + 'hooks/dist/hooks.module.js',
+    'htm': nm + hv + 'dist/htm.module.js',
+    'htm/preact': nm + hv + 'preact/index.module.js',
+    '@supabase/supabase-js': 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/+esm'
+  }
+  document.write('<script type="importmap">' + JSON.stringify({ imports: map }) + '<\/script>')
+  var lf = window.FAKT_LOCAL ? nm + 'leaflet/dist/' : 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/'
+  // Шрифт Inter (OFL): локально из fonts/, на сайте с jsDelivr (версия закреплена)
+  var ff = window.FAKT_LOCAL ? '/fonts/' : 'https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/files/'
+  document.write('<style>' +
+    '@font-face { font-family: "Inter"; font-style: normal; font-display: swap; font-weight: 100 900; src: url('+ff+'inter-cyrillic-ext-wght-normal.woff2) format("woff2"); unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }' +
+    '@font-face { font-family: "Inter"; font-style: normal; font-display: swap; font-weight: 100 900; src: url('+ff+'inter-cyrillic-wght-normal.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }' +
+    '@font-face { font-family: "Inter"; font-style: normal; font-display: swap; font-weight: 100 900; src: url('+ff+'inter-latin-wght-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }' + '</style>')
+  document.write('<link rel="stylesheet" href="' + lf + 'leaflet.css"><script src="' + lf + 'leaflet.js"><\/script>')
+</script>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div id="app"><div class="boot"><svg width="52" height="52" style="margin:0 auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#0B3D6E"/><path d="M24 8.5c-7.5 0-13.5 5.8-13.5 13.1 0 9.6 13.5 18.9 13.5 18.9s13.5-9.3 13.5-18.9C37.5 14.3 31.5 8.5 24 8.5z" fill="#fff"/><path d="m18.2 21.4 4.2 4.2 7.6-8.2" fill="none" stroke="#F2B705" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Rastau загружается…</div></div></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "Rastau · контроль подтверждённых работ",
+  "short_name": "Rastau",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f9",
+  "theme_color": "#0b3d6e",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ru",
+  "description": "Акимат платит подрядчику только за работу, подтверждённую фото с места"
+}

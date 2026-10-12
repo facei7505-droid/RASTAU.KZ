@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rastau: видео и презентация</title>
+<meta name="description" content="Rastau: акимат платит за факт, а не за бумагу. Видео с демо и презентация проекта для G-TON 2026.">
+<meta property="og:title" content="Rastau: акимат платит за факт, а не за бумагу">
+<meta property="og:image" content="video/thumb.jpg">
+<link rel="icon" href="favicon.svg">
+<style>
+:root{--navy:#0B2A4A;--navy2:#143A60;--paper:#F5F3EE;--ink:#0B2A4A;--muted:#5B6878;--gold:#E8A317;--line:#DCD7CC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+header{background:var(--navy);color:var(--paper);padding:28px 16px 56px}
+.wrap{max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:20px}
+.brand img{width:40px;height:40px}
+h1{font-size:clamp(30px,5vw,54px);line-height:1.1;margin:40px 0 14px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+.lead{color:#B9C7D8;max-width:640px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid #2C5378;color:var(--paper)}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+main{padding:0 16px 64px}
+.video{margin-top:-32px;background:#000;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(11,42,74,.25)}
+video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.cap{color:var(--muted);font-size:14px;margin:10px 0 0}
+h2{font-size:26px;margin:52px 0 16px}
+.tasks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.task{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.task b{display:block;font-size:13px;letter-spacing:.06em;color:#B5780A;text-transform:uppercase;margin-bottom:6px}
+.task p{margin:0;color:var(--muted);font-size:15px}
+.slides{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.slides img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:24px 16px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand"><img src="favicon.svg" alt="">Rastau</div>
+  <h1>Акимат платит за <em>факт</em>, а не за бумагу</h1>
+  <p class="lead">Работа подрядчика засчитывается только по фото с места, которое проверил сервер: GPS, время, повтор снимка и сравнение «до/после». Решение принимает человек, акт подписывается ЭЦП.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://rastau-kz.vercel.app">Открыть демо-стенд</a>
+    <a class="btn" href="presentation/rastau-presentation.pdf">Презентация PDF</a>
+    <a class="btn" href="https://github.com/facei7505-droid/RASTAU.KZ">Код на GitHub</a>
+  </div>
+</div></header>
+<main><div class="wrap">
+  <div class="video">
+    <video controls preload="metadata" poster="screenshots/dashboard.jpg" playsinline>
+      <source src="video/rastau-video.mp4" type="video/mp4">
+      <track kind="subtitles" srclang="ru" label="Русский" src="video/rastau-video.ru.vtt">
+    </video>
+  </div>
+  <p class="cap">Видео 5:27: презентация и показ живой системы. Субтитры включаются в плеере. Пароль для всех демо-ролей: fakt2026.</p>
+
+  <h2>Три задачи G-TON 2026</h2>
+  <div class="tasks">
+    <div class="task"><b>№2 · Конаев</b>Стройки<p>127 объектов на одной карте: план, заявлено подрядчиком, подтверждено фото.</p></div>
+    <div class="task"><b>А-3 · область Абай</b>Дороги<p>Дефект за минуту уходит подрядчику, ремонт принимается по фото «до/после».</p></div>
+    <div class="task"><b>№6 · Конаев</b>Вывоз мусора<p>Вывоз засчитывается только по фото площадки, жалоба жителя по QR.</p></div>
+  </div>
+
+  <h2>Презентация</h2>
+  <div class="slides">
+    <img src="presentation/slides/slide-01.jpg" alt="Слайд 1" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-02.jpg" alt="Слайд 2" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-03.jpg" alt="Слайд 3" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-04.jpg" alt="Слайд 4" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-05.jpg" alt="Слайд 5" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-06.jpg" alt="Слайд 6" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-07.jpg" alt="Слайд 7" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-08.jpg" alt="Слайд 8" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-09.jpg" alt="Слайд 9" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-10.jpg" alt="Слайд 10" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-11.jpg" alt="Слайд 11" loading="lazy" width="1920" height="1080">
+    <img src="presentation/slides/slide-12.jpg" alt="Слайд 12" loading="lazy" width="1920" height="1080">
+  </div>
+</div></main>
+<footer><div class="wrap">Rastau · G-TON 2026 · Smart City Kazakhstan. Организации, люди и суммы в демо вымышлены.</div></footer>
+</body>
+</html>
